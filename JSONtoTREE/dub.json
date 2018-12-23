@@ -1,0 +1,13 @@
+{
+	"description": "A minimal D application.",
+	"dependencies": {
+		"jin-tree": "~>3.0.0",
+		"vibe-d": "~>0.8.4"
+	},
+	"authors": [
+		"emil1"
+	],
+	"copyright": "Copyright © 2018, emil1",
+	"license": "proprietary",
+	"name": "d_temp"
+}

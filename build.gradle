@@ -1,0 +1,24 @@
+apply plugin: 'docker'
+
+buildscript {
+	repositories { jcenter() }
+	dependencies {
+		classpath 'se.transmode.gradle:gradle-docker:1.2'
+	}
+}
+
+docker {
+	baseImage "dlanguage/dmd:2.079.0"
+}
+
+task createImage(type: Docker) {
+	applicationName = "emilserver"
+	exposePort 8080
+	addFile('JSONtoTREE/.', '/')
+	runCommand 'apt-get update \
+ && apt-get install -y --no-install-recommends libcurl4-gnutls-dev libevent-dev libssl-dev \
+ && apt-get clean && rm -rf /var/lib/apt/lists/* /var/cache/apt \
+ && dub upgrade'
+	workingDir('/')
+	defaultCommand([ "dub", "run", "--build=release" ])
+}

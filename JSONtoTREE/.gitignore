@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+d_temp.so
+d_temp.dylib
+d_temp.dll
+d_temp.a
+d_temp.lib
+d_temp-test-*
+*.exe
+*.o
+*.obj
+*.lst
