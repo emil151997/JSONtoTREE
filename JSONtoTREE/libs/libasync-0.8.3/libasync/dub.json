@@ -1,0 +1,43 @@
+{
+	"configurations": [
+		{
+			"targetType": "staticLibrary",
+			"sourceFiles-windows-x86": [
+				"ws2_32_ex.lib"
+			],
+			"name": "regular"
+		}
+	],
+	"targetName": "async",
+	"authors": [
+		"Etienne Cimon",
+		"Sönke Ludwig"
+	],
+	"libs-windows": [
+		"ws2_32",
+		"advapi32",
+		"user32"
+	],
+	"versions": [
+		"EnableDebugger"
+	],
+	"license": "MIT",
+	"targetPath": "build",
+	"name": "libasync",
+	"sourcePaths": [
+		"source/"
+	],
+	"libs-linux": [
+		"rt"
+	],
+	"description": "A cross-platform event loop library of asynchroneous objects.",
+	"dependencies": {
+		"memutils": "~>0.4.8"
+	},
+	"targetType": "staticLibrary",
+	"workingDirectory": "build",
+	"importPaths": [
+		"source/"
+	],
+	"version": "0.8.3"
+}

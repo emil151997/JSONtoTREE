@@ -1,0 +1,115 @@
+{
+	"libs-windows-dmd": [
+		"ws2_32",
+		"user32"
+	],
+	"license": "MIT",
+	"copyright": "Copyright © 2016-2018 Sönke Ludwig",
+	"name": "eventcore",
+	"sourcePaths": [
+		"source/"
+	],
+	"libs-linux": [
+		"anl",
+		"resolv"
+	],
+	"description": "Pro-actor based abstraction layer over operating system asynchronous I/O facilities.",
+	"importPaths": [
+		"source/"
+	],
+	"dependencies": {
+		"taggedalgebraic": "~>0.10.12"
+	},
+	"targetType": "library",
+	"configurations": [
+		{
+			"platforms": [
+				"linux"
+			],
+			"targetType": "library",
+			"versions": [
+				"EventcoreEpollDriver"
+			],
+			"name": "epoll"
+		},
+		{
+			"platforms": [
+				"osx",
+				"freebsd"
+			],
+			"targetType": "library",
+			"versions": [
+				"EventcoreKqueueDriver"
+			],
+			"name": "kqueue"
+		},
+		{
+			"platforms": [
+				"windows-x86_64",
+				"windows-x86_mscoff",
+				"windows-ldc",
+				"windows-gdc"
+			],
+			"targetType": "library",
+			"versions": [
+				"EventcoreWinAPIDriver"
+			],
+			"name": "winapi"
+		},
+		{
+			"platforms": [
+				"posix",
+				"windows-x86_64",
+				"windows-x86_mscoff"
+			],
+			"targetType": "library",
+			"versions": [
+				"EventcoreSelectDriver"
+			],
+			"name": "select"
+		},
+		{
+			"platforms": [
+				"windows-x86-dmd"
+			],
+			"sourceFiles": [
+				"lib/ws2_32.lib",
+				"lib/kernel32.lib"
+			],
+			"targetType": "library",
+			"versions": [
+				"EventcoreWinAPIDriver"
+			],
+			"name": "winapi-optlink"
+		},
+		{
+			"platforms": [
+				"windows-x86-dmd"
+			],
+			"sourceFiles": [
+				"lib/ws2_32.lib",
+				"lib/kernel32.lib"
+			],
+			"targetType": "library",
+			"versions": [
+				"EventcoreSelectDriver"
+			],
+			"name": "select-optlink"
+		},
+		{
+			"dependencies": {
+				"libasync": "~>0.8.2"
+			},
+			"targetType": "library",
+			"versions": [
+				"EventcoreLibasyncDriver"
+			],
+			"name": "libasync"
+		},
+		{
+			"targetType": "library",
+			"name": "generic"
+		}
+	],
+	"version": "0.8.39"
+}

@@ -1,0 +1,26 @@
+{
+	"authors": [
+		"Sönke Ludwig"
+	],
+	"license": "MIT",
+	"copyright": "Copyright © 2015-2016 rejectedsoftware e.K.",
+	"name": "diet-ng",
+	"sourcePaths": [
+		"source/"
+	],
+	"description": "Next generation Diet template compiler.",
+	"importPaths": [
+		"source/"
+	],
+	"version": "1.5.0",
+	"configurations": [
+		{
+			"targetType": "library",
+			"name": "library"
+		}
+	],
+	"-ddoxFilterArgs": [
+		"--ex",
+		"diet.internal."
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"targetName": "botan_math",
+	"authors": [
+		"Jack Lloyd",
+		"Etienne Cimon",
+		"See CREDITS.md for more."
+	],
+	"license": "BSD 2-clause",
+	"targetPath": "build",
+	"name": "botan-math",
+	"sourcePaths": [
+		"source/botan_math/"
+	],
+	"description": "A D Math Library used for Botan",
+	"importPaths": [
+		"source/"
+	],
+	"targetType": "staticLibrary",
+	"version": "1.0.3",
+	"configurations": [
+		{
+			"dflags-windows-x86": [
+				"-m32mscoff"
+			],
+			"targetType": "staticLibrary",
+			"name": "regular"
+		},
+		{
+			"dflags-windows-x86": [
+				"-m32mscoff"
+			],
+			"targetType": "staticLibrary",
+			"name": "32mscoff"
+		}
+	]
+}

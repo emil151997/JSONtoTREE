@@ -1,0 +1,116 @@
+{
+	"configurations": [
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"vibe-d:core": "vibe-core"
+			},
+			"name": "vibe-core"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"vibe-d:core": "win32_mscoff"
+			},
+			"name": "win32_mscoff"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"vibe-d:core": "libevent"
+			},
+			"name": "libevent"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"vibe-d:core": "libasync"
+			},
+			"name": "libasync"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"vibe-d:core": "win32"
+			},
+			"name": "win32"
+		}
+	],
+	"targetName": "vibed",
+	"authors": [
+		"Sönke Ludwig",
+		"Mathias 'Geod24' Lang",
+		"Etienne Cimon",
+		"Martin Nowak",
+		"Mihails 'Dicebot' Strasuns",
+		"150 contributors total"
+	],
+	"systemDependencies": "Optionally libevent 2.0.x, OpenSSL 1.0.x",
+	"subPackages": [
+		"utils",
+		"data",
+		"core",
+		"stream",
+		"tls",
+		"crypto",
+		"textfilter",
+		"inet",
+		"mail",
+		"http",
+		"mongodb",
+		"redis",
+		"web"
+	],
+	"sourceFiles": [
+		"source/vibe/d.d",
+		"source/vibe/vibe.d"
+	],
+	"license": "MIT",
+	"copyright": "Copyright © 2012-2018 rejectedsoftware e.K.",
+	"name": "vibe-d",
+	"sourcePaths": [
+		"lib"
+	],
+	"description": "Event driven web and concurrency framework",
+	"homepage": "http://vibed.org/",
+	"dependencies": {
+		"vibe-d:stream": ">=0.0.0",
+		"vibe-d:web": ">=0.0.0",
+		"vibe-d:mail": ">=0.0.0",
+		"vibe-d:redis": ">=0.0.0",
+		"vibe-d:crypto": ">=0.0.0",
+		"vibe-d:tls": ">=0.0.0",
+		"vibe-d:mongodb": ">=0.0.0",
+		"vibe-d:textfilter": ">=0.0.0",
+		"vibe-d:data": ">=0.0.0",
+		"vibe-d:http": ">=0.0.0",
+		"vibe-d:inet": ">=0.0.0",
+		"vibe-d:utils": ">=0.0.0",
+		"vibe-d:core": ">=0.0.0"
+	},
+	"targetType": "library",
+	"version": "0.8.4",
+	"importPaths": [
+		"source/"
+	],
+	"-ddoxFilterArgs": [
+		"--unittest-examples",
+		"--min-protection=Protected",
+		"--ex",
+		"vibe.core.drivers.",
+		"--ex",
+		"vibe.internal.",
+		"--ex",
+		"vibe.web.internal.",
+		"--ex",
+		"diet.internal",
+		"--ex",
+		"stdx.",
+		"--ex",
+		"eventcore.internal.",
+		"--ex",
+		"eventcore.drivers.",
+		"--ex",
+		"mir."
+	]
+}

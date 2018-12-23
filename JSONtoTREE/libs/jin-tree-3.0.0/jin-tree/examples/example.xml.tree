@@ -1,0 +1,25 @@
+! DOCTYPE \html
+? xml
+	version \1.0
+	standalone \yes
+html 
+	@ xmlns:x \x
+	head 
+		title \Welcome!
+		style 
+			@ rel \stylesheet
+			@ type \text/css
+			@ href \index.css
+		link 
+			@ rel \canonical
+			@ href % uri
+				path \/
+				query
+					article \rock&roll
+					author  \Nin Jin
+	body 
+		@ x:y \foo
+		h1 \Welcome!
+		-- \TODO add page description 
+		hr 
+		p \Some page content

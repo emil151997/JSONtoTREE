@@ -1,0 +1,11 @@
+dict
+	\=a+b=c
+		: list true 
+	\"foo"
+		: list 
+			false 
+			float \-1.23
+	\
+		\hello
+		\world
+		: list null 

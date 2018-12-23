@@ -1,0 +1,8 @@
+function
+	name \getEl
+	arg \id
+	body return
+		call
+			obj get \document
+			name \getElementById
+			arg get \id

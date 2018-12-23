@@ -1,0 +1,45 @@
+\hypertarget{app_8d}{}\section{Файл C\+:/gradle\+\_\+test/\+J\+S\+O\+Nto\+T\+R\+E\+E/source/app.d}
+\label{app_8d}\index{C\+:/gradle\+\_\+test/\+J\+S\+O\+Nto\+T\+R\+E\+E/source/app.\+d@{C\+:/gradle\+\_\+test/\+J\+S\+O\+Nto\+T\+R\+E\+E/source/app.\+d}}
+
+
+Данная программа запускает веб сервер, и при получении P\+O\+S\+T-\/запроса в виде J\+S\+ON, преобразует его в Tree.  
+
+
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{app_8d_acdef7a1fd863a6d3770c1268cb06add3}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8d_aa826b13b64841dc3a91ac2f7cc128670}{handle\+Request}} (H\+T\+T\+P\+Server\+Request req, H\+T\+T\+P\+Server\+Response res)
+\begin{DoxyCompactList}\small\item\em Функция обработки запроса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Данная программа запускает веб сервер, и при получении P\+O\+S\+T-\/запроса в виде J\+S\+ON, преобразует его в Tree. 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{app_8d_aa826b13b64841dc3a91ac2f7cc128670}\label{app_8d_aa826b13b64841dc3a91ac2f7cc128670}} 
+\index{app.\+d@{app.\+d}!handle\+Request@{handle\+Request}}
+\index{handle\+Request@{handle\+Request}!app.\+d@{app.\+d}}
+\subsubsection{\texorpdfstring{handle\+Request()}{handleRequest()}}
+{\footnotesize\ttfamily void handle\+Request (\begin{DoxyParamCaption}\item[{H\+T\+T\+P\+Server\+Request}]{req,  }\item[{H\+T\+T\+P\+Server\+Response}]{res }\end{DoxyParamCaption})}
+
+
+
+Функция обработки запроса 
+
+Tree.\+from\+J\+S\+ON -\/ функция преобразования из J\+S\+ON в Tree Something ~\newline
+ res.\+write\+Body -\/ функция записи содержимого тела \mbox{\Hypertarget{app_8d_acdef7a1fd863a6d3770c1268cb06add3}\label{app_8d_acdef7a1fd863a6d3770c1268cb06add3}} 
+\index{app.\+d@{app.\+d}!main@{main}}
+\index{main@{main}!app.\+d@{app.\+d}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily void main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу 
+
+listen\+H\+T\+TP(\char`\"{}\+:8080\char`\"{}, \&handle\+Request) -\/ запускает веб-\/сервер на порту 8080, все запросы обрабатываются функцией handle\+Request Something ~\newline
+ run\+Application() -\/ Выполняет окончательную инициализацию и запускает цикл обработки событий 

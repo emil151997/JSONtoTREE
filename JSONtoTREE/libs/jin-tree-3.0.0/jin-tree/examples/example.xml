@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<?xml
+	version="1.0"
+	standalone="yes"
+?>
+<html xmlns:x="x">
+	<head>
+		<title>Welcome!</title>
+		<style
+			rel="stylesheet"
+			type="text/css"
+			href="index.css"
+		/>
+		<link
+			rel="canonical"
+			href="/?article=rock%26roll&amp;author=Nin+Jin"
+		/>
+	</head>
+	<body x:y="foo">
+		<h1>Welcome!</h1>
+		<!-- TODO add page description -->
+		<hr/>
+		<p>Some page content</p>
+	</body>
+</html>

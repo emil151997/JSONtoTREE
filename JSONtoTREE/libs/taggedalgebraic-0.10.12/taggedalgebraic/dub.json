@@ -1,0 +1,22 @@
+{
+	"authors": [
+		"Sönke Ludwig"
+	],
+	"license": "BSL-1.0",
+	"copyright": "Copyright © 2015, Sönke Ludiwg",
+	"name": "taggedalgebraic",
+	"sourcePaths": [
+		"source/"
+	],
+	"description": "A \"tagged union\" implementation with transparent operator forwarding.",
+	"importPaths": [
+		"source/"
+	],
+	"version": "0.10.12",
+	"configurations": [
+		{
+			"targetType": "library",
+			"name": "library"
+		}
+	]
+}

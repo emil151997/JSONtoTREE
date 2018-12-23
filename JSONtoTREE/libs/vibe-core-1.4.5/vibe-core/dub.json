@@ -1,0 +1,86 @@
+{
+	"targetName": "vibe_core",
+	"authors": [
+		"Sönke Ludwig"
+	],
+	"mainSourceFile": "source/vibe/appmain.d",
+	"license": "MIT",
+	"copyright": "Copyright © 2016-2018, rejectedsoftware e.K.",
+	"name": "vibe-core",
+	"sourcePaths": [
+		"source/"
+	],
+	"description": "The I/O core library of vibe.d.",
+	"importPaths": [
+		"source/"
+	],
+	"dependencies": {
+		"eventcore": "~>0.8.39",
+		"stdx-allocator": "~>2.77.0"
+	},
+	"version": "1.4.5",
+	"configurations": [
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "winapi"
+			},
+			"name": "winapi"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "winapi-optlink"
+			},
+			"name": "winapi-optlink"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "epoll"
+			},
+			"name": "epoll"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "kqueue"
+			},
+			"name": "kqueue"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "select"
+			},
+			"name": "select"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "select-optlink"
+			},
+			"name": "select-optlink"
+		},
+		{
+			"targetType": "library",
+			"subConfigurations": {
+				"eventcore": "libasync"
+			},
+			"name": "libasync"
+		}
+	],
+	"buildTypes": {
+		"unittest": {
+			"buildOptions": [
+				"debugMode",
+				"debugInfo",
+				"unittests"
+			],
+			"debugVersions": [
+				"VibeMutexLog",
+				"VibeAsyncLog"
+			]
+		}
+	}
+}

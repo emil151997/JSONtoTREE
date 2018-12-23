@@ -1,0 +1,21 @@
+{
+	"authors": [
+		"jin"
+	],
+	"license": "public domain",
+	"name": "jin-tree",
+	"sourcePaths": [
+		"source/"
+	],
+	"description": "Tree - simple fast compact user-readable binary-safe extensible structural format",
+	"importPaths": [
+		"source/"
+	],
+	"version": "3.0.0",
+	"configurations": [
+		{
+			"targetType": "library",
+			"name": "library"
+		}
+	]
+}

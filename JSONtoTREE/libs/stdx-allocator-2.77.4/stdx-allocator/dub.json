@@ -1,0 +1,22 @@
+{
+	"authors": [
+		"Team Phobos"
+	],
+	"license": "Boost",
+	"copyright": "Copyright © 2017, Team Phobos",
+	"name": "stdx-allocator",
+	"sourcePaths": [
+		"source/"
+	],
+	"description": "Extracted std.experimental.allocator",
+	"importPaths": [
+		"source/"
+	],
+	"version": "2.77.4",
+	"configurations": [
+		{
+			"targetType": "library",
+			"name": "library"
+		}
+	]
+}
