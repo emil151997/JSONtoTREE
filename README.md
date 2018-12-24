@@ -1,9 +1,8 @@
 # JSONtoTREE
 ## Демонстрация работы
 ### Пример запроса
-```
 {"name": "Emil", "surname": "Minosyan", "Position": "Apparatchik"}
-```
+
 ### Пример ответа
 ```
 dict 
@@ -40,6 +39,9 @@ docker run -p 8080:8080 emilserver
 ```
 docker container stop "номер id контейнера"
 ```
+## Проверить рапотоспособность сервера можно через утилиту curl:
+curl --request POST   --url localhost:8080   --header 'Content-Type: application/json'    --data '{"name": "Emil", "surname": "Minosyan", "Position": "Apparatchik"}'
+
 ## Как проверить работоспособность сервера через утилиту Postman
 1. Загрузите утилиту с официального сайта
 2. Настройте на POST запрос

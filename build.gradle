@@ -14,8 +14,8 @@ docker {
 task createImage(type: Docker) {
 	applicationName = "emilserver"
 	exposePort 8080
-	addFile('/JSONtoTREE/.', '/JSONtoTREE/')
-	addFile('/JSONtoTREE/libs/.','/root/.dub/packages/')
+	addFile('./JSONtoTREE/', '/JSONtoTREE/')
+	addFile('./JSONtoTREE/libs/.','/root/.dub/packages/')
 	runCommand 'apt-get update \
  && apt-get install -y --no-install-recommends libcurl4-gnutls-dev libevent-dev libssl-dev \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /var/cache/apt \
